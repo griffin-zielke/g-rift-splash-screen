@@ -74,13 +74,13 @@ class SplashLevel extends Phaser.Scene {
 
     this.tweens.add({
       targets: this.companyLine1, //your image that must spin
-      x: '170',
+      x: '165',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
     this.tweens.add({
       targets: this.companyLine2, //your image that must spin
-      x: '140',
+      x: '135',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
