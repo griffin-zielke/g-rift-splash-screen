@@ -16,8 +16,8 @@ class BootLevel extends Phaser.Scene {
       'https://griffin-zielke.github.io/g-rift-splash-screen/';
     this.load.bitmapFont({
       key: 'Oswald',
-      textureURL: 'static/assets/font/G_Rift.png',
-      fontDataURL: 'static/assets/font/G_Rift.xml',
+      textureURL: 'static/assets/font/G-Rift-Blue.png',
+      fontDataURL: 'static/assets/font/G-Rift-Blue.xml',
     });
     this.load.image('logo', 'static/assets/G Rift.png');
 
