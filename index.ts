@@ -13,13 +13,14 @@ class BootLevel extends Phaser.Scene {
     // CHANGE BASE URL!!!!
     this.add.text(20, 20, 'Boot Sequence Initiated.');
     this.load.baseURL =
-      'https://neoalchemy.github.io/starting-boilerplate-phaser-zcqxxx/';
+      'https://griffin-zielke.github.io/g-rift-splash-screen/';
     this.load.bitmapFont({
       key: 'Oswald',
       textureURL: 'static/assets/font/OswaldLightRed.png',
       fontDataURL: 'static/assets/font/OswaldLightRed.xml',
     });
-    this.load.image('logo', 'static/assets/logo.png');
+    this.load.image('logo', 'static/assets/G Rift.png');
+
     this.load.image('splashscreen', 'static/assets/splashscreen.png');
   }
 
@@ -35,13 +36,13 @@ class SplashLevel extends Phaser.Scene {
   }
 
   preload() {
-    const splashScreen = this.add.image(200, 200, 'splashscreen');
+
 
     const logo = this.add.image(200, 100, 'logo');
-    logo.setScale(0.3);
+    logo.setScale(1.3);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(-300, 200, 'Oswald', 'NeoAlchemy', 32);
+    const text1 = this.add.bitmapText(-300, 200, 'Oswald', 'G Rift', 32);
     this.companyLine1 = text1;
     const text2 = this.add.bitmapText(-300, 230, 'Oswald', 'Indie Games', 32);
     this.companyLine2 = text2;
@@ -62,17 +63,18 @@ class SplashLevel extends Phaser.Scene {
   private companyLine2: Phaser.GameObjects.BitmapText;
 
   create() {
-    this.tweens.add({
-      targets: this.logo, //your image that must spin
-      rotation: 2 * Math.PI, //rotation value must be radian
-      ease: 'Bounce',
-      delay: 600,
-      duration: 600, //duration is in milliseconds
-    });
+    this.cameras.main.setBackgroundColor('#006298')
+//    this.tweens.add({
+//      targets: this.logo, //your image that must spin
+//      rotation: 2 * Math.PI, //rotation value must be radian
+//     ease: 'Bounce',
+//      delay: 600,
+//      duration: 600, //duration is in milliseconds
+//    });
 
     this.tweens.add({
       targets: this.companyLine1, //your image that must spin
-      x: '140',
+      x: '170',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
@@ -113,7 +115,7 @@ const config = {
   type: Phaser.AUTO,
   width: 400,
   height: 400,
-  backgroundColor: '0x000',
+  backgroundColor: '#0x000',
   physics: {
     default: 'arcade',
     arcade: {
